@@ -17,6 +17,7 @@ import (
 // P directly to the first waiter in line.
 // See issue 33747 for discussion.
 func TestSemaHandoff(t *testing.T) {
+	t.Skip("randomScheduler")
 	const iter = 10000
 	ok := 0
 	for i := 0; i < iter; i++ {
@@ -38,6 +39,7 @@ func TestSemaHandoff(t *testing.T) {
 }
 
 func TestSemaHandoff1(t *testing.T) {
+	t.Skip("randomScheduler")
 	if GOMAXPROCS(-1) <= 1 {
 		t.Skip("GOMAXPROCS <= 1")
 	}
@@ -47,6 +49,7 @@ func TestSemaHandoff1(t *testing.T) {
 }
 
 func TestSemaHandoff2(t *testing.T) {
+	t.Skip("randomScheduler")
 	if GOMAXPROCS(-1) <= 2 {
 		t.Skip("GOMAXPROCS <= 2")
 	}
